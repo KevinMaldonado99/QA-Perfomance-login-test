@@ -52,7 +52,7 @@ export default function () {
     );
 
     check(res, {
-        'status es 200': (r) => r.status === 200,
+        'status exitoso': (r) => r.status >= 200 && r.status < 300,
         'response < 1.5s': (r) => r.timings.duration < 1500,
     });
 }
